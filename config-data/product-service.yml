@@ -1,0 +1,38 @@
+spring:
+  threads:
+    virtual:
+      enabled: true
+  mongodb:
+    host: localhost
+    port: 27017
+    database: product-db
+    username: root
+    password: password
+    authentication-database: admin
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:8080/realms/ecommerce-realm
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+
+app:
+  maintenance:
+    message: "Sistema Operativo - Version 1.0"
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "refresh, health"
+
+  web:
+    error:
+      include-message: always
+      include-stacktrace: never
+server:
+  port: 8081

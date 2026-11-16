@@ -1,0 +1,29 @@
+# Entorno y Secretos (CRÍTICO)
+.env
+*.env
+!.env.example
+
+# IDEs (Evita subir tokens)
+.idea/
+*.iml
+.vscode/
+
+# Maven / Build
+target/
+*.jar
+*.war
+*.class
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+
+# Archivos temporales y grandes
+*.deb
+*.tar
+*.log
+
+# Sistema Operativo
+.DS_Store
+Thumbs.db
