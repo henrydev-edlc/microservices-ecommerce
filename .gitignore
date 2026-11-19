@@ -27,3 +27,6 @@ release.properties
 # Sistema Operativo
 .DS_Store
 Thumbs.db
+
+# Credentials
+K8s/secrets.yaml

@@ -1,0 +1,97 @@
+apiVersion: v1
+kind: Secret
+metadata:
+  name: mongo-secret
+type: Opaque
+stringData:
+  MONGO_INITDB_ROOT_USERNAME: "TU_USUARIO_MONGO"
+  MONGO_INITDB_ROOT_PASSWORD: "TU_PASSWORD_MONGO"
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: mysql-secret
+type: Opaque
+stringData:
+  MYSQL_ROOT_PASSWORD: "TU_PASSWORD_MYSQL"
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: order-db-secret
+type: Opaque
+stringData:
+  POSTGRES_USER: "TU_USUARIO_POSTGRES_ORDER"
+  POSTGRES_PASSWORD: "TU_PASSWORD_POSTGRES_ORDER"
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: keycloak-db-secret
+type: Opaque
+stringData:
+  POSTGRES_USER: "TU_USUARIO_POSTGRES_KEYCLOAK"
+  POSTGRES_PASSWORD: "TU_PASSWORD_POSTGRES_KEYCLOAK"
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: inventory-db-secret
+type: Opaque
+stringData:
+  username: "TU_USUARIO_MYSQL_INVENTORY"
+  password: "TU_PASSWORD_MYSQL_INVENTORY"
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: notification-mail-secret
+type: Opaque
+stringData:
+  username: "TU_USERNAME_MAILTRAP"
+  password: "TU_PASSWORD_MAILTRAP"
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: order-db-secret
+type: Opaque
+stringData:
+  POSTGRES_USER: "TU_USUARIO_POSTGRES_ORDER"
+  POSTGRES_PASSWORD: "TU_PASSWORD_POSTGRES_ORDER"
+  SPRING_DATASOURCE_USERNAME: "admin"
+  SPRING_DATASOURCE_PASSWORD: "admin"
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: mongo-secret
+type: Opaque
+stringData:
+  MONGO_INITDB_ROOT_USERNAME: "TU_USUARIO_MONGO"
+  MONGO_INITDB_ROOT_PASSWORD: "TU_PASSWORD_MONGO"
+  SPRING_MONGODB_USERNAME: "root"
+  SPRING_MONGODB_PASSWORD: "password"
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: keycloak-admin-secret
+type: Opaque
+stringData:
+  KEYCLOAK_ADMIN: "admin"
+  KEYCLOAK_ADMIN_PASSWORD: "TU_PASSWORD_KEYCLOAK"
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: lgtm-secret
+type: Opaque
+stringData:
+  GF_SECURITY_ADMIN_PASSWORD: "TU_PASSWORD_GRAFANA"
+---
+POSTGRES_USER: "keycloak"
+POSTGRES_PASSWORD: "TU_PASSWORD_POSTGRES_KEYCLOAK"
+KC_DB_USERNAME: "keycloak"
+KC_DB_PASSWORD: "TU_PASSWORD_POSTGRES_KEYCLOAK"
+
