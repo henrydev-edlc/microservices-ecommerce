@@ -61,9 +61,16 @@ spec:
             - name: SPRING_DATASOURCE_URL
               value: "jdbc:postgresql://order-db:5432/order-db"
             - name: SPRING_DATASOURCE_USERNAME
-              value: "admin"
+              valueFrom:
+                secretKeyRef:
+                  name: order-db-secret
+                  key: SPRING_DATASOURCE_USERNAME
+
             - name: SPRING_DATASOURCE_PASSWORD
-              value: "admin"
+              valueFrom:
+                secretKeyRef:
+                  name: order-db-secret
+                  key: SPRING_DATASOURCE_PASSWORD
             - name: SPRING_RABBITMQ_HOST
               value: "rabbitmq"
             - name: SPRING_JPA_HIBERNATE_DDL_AUTO

@@ -36,9 +36,16 @@ spec:
             - name: SPRING_MONGODB_DATABASE
               value: "product-db"
             - name: SPRING_MONGODB_USERNAME
-              value: "root"
+              valueFrom:
+                secretKeyRef:
+                  name: mongo-secret
+                  key: SPRING_MONGODB_USERNAME
+
             - name: SPRING_MONGODB_PASSWORD
-              value: "password"
+              valueFrom:
+                secretKeyRef:
+                  name: mongo-secret
+                  key: SPRING_MONGODB_PASSWORD
             - name: SPRING_MONGODB_AUTHENTICATION_DATABASE
               value: "admin"
 ---

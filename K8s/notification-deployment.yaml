@@ -34,9 +34,16 @@ spec:
             - name: SPRING_MAIL_PORT
               value: "2525"
             - name: SPRING_MAIL_USERNAME
-              value: "TU_USERNAME_MAILTRAP"
-            - name: henrydev.edlc@gmail.com
-              value: "zgctugbrqpuiegno"
+              valueFrom:
+                secretKeyRef:
+                  name: notification-mail-secret
+                  key: username
+
+            - name: SPRING_MAIL_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: notification-mail-secret
+                  key: password
 ---
 apiVersion: v1
 kind: Service
